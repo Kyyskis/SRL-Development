@@ -374,6 +374,12 @@ begin
   Result := Length(Self);
 end;
 
+function TIntegerArray.Clear(): Boolean;
+begin
+  SetLength(Self, 0);
+  exit(True);
+end;     
+
 procedure T2DIntegerArray.Remove(const Value: TIntegerArray; const All: Boolean = False);
 var
   i: Int32;
